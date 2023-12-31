@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<LangVersion>9</LangVersion>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	</PropertyGroup>
+	<PropertyGroup>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+	<PropertyGroup>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="StreamDeckSharp" Version="5.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<Reference Include="LumosLIB">
+			<HintPath>..\..\Lumos\bin\Debug\net6.0\LumosLIB.dll</HintPath>
+		</Reference>
+		<Reference Include="LumosProtobuf">
+			<HintPath>..\..\Lumos\bin\Debug\net6.0\LumosProtobuf.dll</HintPath>
+		</Reference>
+		<Reference Include="LumosToolsLIB">
+			<HintPath>..\..\Lumos\bin\Debug\net6.0\LumosToolsLIB.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+	  <Exec Command="xcopy &quot;$(TargetPath)&quot; &quot;$(ProjectDir)..\Releases\&quot; /F /R /Y /I&#xD;&#xA;xcopy &quot;$(TargetDir)$(TargetName).pdb&quot; &quot;$(ProjectDir)..\Releases\&quot; /F /R /Y /I&#xD;&#xA;&#xD;&#xA;rem copy the dependencies to build\dep&#xD;&#xA;xcopy &quot;$(TargetDir)\StreamDeckSharp.dll&quot; &quot;$(ProjectDir)..\Releases\dependencies\&quot; /F /R /Y /I&#xD;&#xA;xcopy &quot;$(TargetDir)\OpenMacroBoard.SDK.dll&quot; &quot;$(ProjectDir)..\Releases\dependencies\&quot; /F /R /Y /I&#xD;&#xA;xcopy &quot;$(TargetDir)\SixLabors.ImageSharp.dll&quot; &quot;$(ProjectDir)..\Releases\dependencies\&quot; /F /R /Y /I&#xD;&#xA;xcopy &quot;$(TargetDir)\HidSharp.dll&quot; &quot;$(ProjectDir)..\Releases\dependencies\&quot; /F /R /Y /I" />
+	</Target>
+</Project>
