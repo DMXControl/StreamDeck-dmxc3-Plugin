@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamDeck", "StreamDeck.csproj", "{1025465D-6FC5-494F-A41B-469CE2F46209}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamDeck", "StreamDeck-dmxc3-Plugin\StreamDeck.csproj", "{1025465D-6FC5-494F-A41B-469CE2F46209}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
