@@ -68,12 +68,12 @@ pipeline {
 		}
 		stage('Archive Artifacts'){
 			steps {
-				bat "xcopy \"$WORKSPACE\\StreamDeck-dmxc3-Plugin\\bin\\Release\\net6.0\\StreamDeck.dll\" \"$WORKSPACE\\output\\\" /F /R /Y /I"
-				bat "xcopy \"$WORKSPACE\\StreamDeck-dmxc3-Plugin\\bin\\Release\\net6.0\\StreamDeck.pdb\" \"$WORKSPACE\\output\\\" /F /R /Y /I"
-				bat "xcopy \"$WORKSPACE\\StreamDeck-dmxc3-Plugin\\bin\\Release\\net6.0\\StreamDeckSharp.dll\" \"$WORKSPACE\\output\\dependencies\\\" /F /R /Y /I"
-				bat "xcopy \"$WORKSPACE\\StreamDeck-dmxc3-Plugin\\bin\\Release\\net6.0\\OpenMacroBoard.SDK.dll\" \"$WORKSPACE\\output\\dependencies\\\" /F /R /Y /I"
-				bat "xcopy \"$WORKSPACE\\StreamDeck-dmxc3-Plugin\\bin\\Release\\net6.0\\SixLabors.ImageSharp.dll\" \"$WORKSPACE\\output\\dependencies\\\" /F /R /Y /I"
-				bat "xcopy \"$WORKSPACE\\StreamDeck-dmxc3-Plugin\\bin\\Release\\net6.0\\HidSharp.dll\" \"$WORKSPACE\\output\\dependencies\\\" /F /R /Y /I"
+				bat "xcopy \"$WORKSPACE\\StreamDeck-dmxc3-Plugin\\bin\\Release\\netstandard2.0\\StreamDeck.dll\" \"$WORKSPACE\\output\\\" /F /R /Y /I"
+				bat "xcopy \"$WORKSPACE\\StreamDeck-dmxc3-Plugin\\bin\\Release\\netstandard2.0\\StreamDeck.pdb\" \"$WORKSPACE\\output\\\" /F /R /Y /I"
+				bat "xcopy \"$WORKSPACE\\StreamDeck-dmxc3-Plugin\\bin\\Release\\netstandard2.0\\StreamDeckSharp.dll\" \"$WORKSPACE\\output\\dependencies\\\" /F /R /Y /I"
+				bat "xcopy \"$WORKSPACE\\StreamDeck-dmxc3-Plugin\\bin\\Release\\netstandard2.0\\OpenMacroBoard.SDK.dll\" \"$WORKSPACE\\output\\dependencies\\\" /F /R /Y /I"
+				bat "xcopy \"$WORKSPACE\\StreamDeck-dmxc3-Plugin\\bin\\Release\\netstandard2.0\\SixLabors.ImageSharp.dll\" \"$WORKSPACE\\output\\dependencies\\\" /F /R /Y /I"
+				bat "xcopy \"$WORKSPACE\\StreamDeck-dmxc3-Plugin\\bin\\Release\\netstandard2.0\\HidSharp.dll\" \"$WORKSPACE\\output\\dependencies\\\" /F /R /Y /I"
 				
 				dir('output') {
 					archiveArtifacts artifacts: '**/*.*'
