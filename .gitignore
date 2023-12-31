@@ -370,3 +370,5 @@ Thumbs.db
 docs/_site/
 docs/generated/
 
+# Notepad++
+*.bak
