@@ -11,7 +11,7 @@
 		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="StreamDeckSharp" Version="5.0.0" />
+		<PackageReference Include="StreamDeckSharp" Version="6.0.0" />
 	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="LumosLIB">
